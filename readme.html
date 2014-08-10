@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Linked Products Report</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited { color: #006666; text-decoration: none; }
+a:hover { color:#00CC99; text-decoration: underline; }
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT { font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif; font-size: 10pt;  color: black; padding: 0px; margin: 20px; }
+H1, H2, H3, H4 { font-weight: bold; }
+h1 { font-size: 20px; }
+h2 { font-size: 16px; }
+code { padding-left: 25px; }
+ol li, ul li { margin: 5px 0; }
+.corefile, .impt { color: red; }
+.bold { font-weight: bold; }
+img { margin-left: 20px; max-width: 95%; }
+-->
+</style>
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<h1>Linked Products Report for Zen Cart v1.5.0, v1.5.1, v1.5.2 and v1.5.3</h1>
+<h3>Version 1.0.0 by lat9</h3>
+<p>Current Support Thread at Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?214240-Linked-Products-Report-Support-Thread">http://www.zen-cart.com/showthread.php?214240-Linked-Products-Report-Support-Thread</a></p>
+<h2>Version History:</h2>
+<ul>
+  <li>v1.0.0, 2014-08-10, Initial release.</li>
+</ul>
+
+<h2>What it does</h2>
+<p>Your store currently makes use of Zen Cart's &quot;Linked Products&quot; feature.  This plugin provides an admin-level report, accessible via <em>Reports-&gt;Linked Products</em>, that identifies, for each linked product:</p>
+<ol>
+  <li>The name of the product's <b>Master Category</b>, with a link to that category. If the master_category_id for the product is invalid, this column shows <span class="impt bold">==> Invalid categories ID (xx)</span>, where <b>xx</b> is the invalid category ID.</li>
+  <li>The name of the product, with a link to that product's definition.</li>
+  <li>A list of <b>Linked Categories</b>, each with a link to that category.</li>
+</ol>
+<p>The table is sorted by the <b>Master Category</b> name.</p>
+
+<h2>Installation</h2>
+<p>There are no core-file overwrites in this plugin; you should <strong>always</strong> backup your cart&rsquo;s database and files prior to making any changes.  Unzip the plugin's package file, rename the YOUR_ADMIN folder to match your custom admin folder's name and copy the plugin's files to your admin folder:</p>
+<ol>
+  <li>/YOUR_ADMIN/stats_products_linked.php</li>
+  <li>/YOUR_ADMIN/includes/extra_datafiles/stats_products_linked_filenames.php</li>
+  <li>/YOUR_ADMIN/includes/functions/extra_functions/init_stats_products_linked.php</li>
+  <li>/YOUR_ADMIN/includes/languages/english/stats_products_linked.php</li>
+  <li>/YOUR_ADMIN/includes/languages/english/extra_definitions/stats_products_linked_extra_definitions.php</li>
+</ol>
+
+<h2>Uninstall</h2>
+<p>First, delete the files that were copied to your zen-cart installation's admin directories. Restore your backup up of  then use your admin's <em>Tools-&gt;Run SQL Patches</em> to run the file <b>stats_products_linked_uninstall.sql</b>.</p>
+
+</body>
+</html>
