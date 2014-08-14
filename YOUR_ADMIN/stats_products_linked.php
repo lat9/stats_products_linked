@@ -153,6 +153,8 @@ if (count ($linked_products[$last_product_id]['categories']) == 1) {
 } else {
   $linked_products[$last_product_id]['master_category_id'] = zen_get_products_category_id ($last_product_id);
   $linked_products[$last_product_id]['name'] = zen_get_products_name ($last_product_id);
+  $linked_products[$last_product_id]['products_type'] = zen_get_products_type ($last_product_id);
+  $category_names->set_name ($linked_products[$last_product_id]['master_category_id']);  //-Cache the category's name
   
 }
 
@@ -175,7 +177,6 @@ foreach ($category_name_list as $master_category_id => $category_name) {
 <?php
       }
 ?>
-
                 <td class="dataTableContent"><a href="<?php echo zen_href_link ($product_type_handlers[$product_info['products_type']], 'product_type=' . $product_info['products_type'] . "&amp;cPath=$master_category_id&amp;pID=$products_id&amp;action=new_product"); ?>"><?php echo $product_info['name']; ?></a></td>
                 <td class="dataTableContent">
 <?php
